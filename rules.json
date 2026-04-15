@@ -1,0 +1,21 @@
+{
+  "version": "2026-04-15",
+  "xhs": [
+    {
+      "pattern": "([加➕\\+]\\s*[vV]|vx|加微信|加威信)",
+      "flags": "gi",
+      "type": "导流违规",
+      "level": "danger",
+      "suggestion": "感兴趣可以"
+    }
+  ],
+  "tiktok": [
+    {
+      "pattern": "(link in bio|telegram|wechat|DM me)",
+      "flags": "gi",
+      "type": "Routing",
+      "level": "danger",
+      "suggestion": "Check profile"
+    }
+  ]
+}
