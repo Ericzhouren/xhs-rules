@@ -154,13 +154,6 @@
       "type": "食品违规",
       "level": "danger",
       "suggestion": "营养补充"
-    },
-    {
-      "pattern": "(远程测试词ABC)",
-      "flags": "g",
-      "type": "远程测试",
-      "level": "danger",
-      "suggestion": "测试替换"
     }
   ],
   "tiktok": [
