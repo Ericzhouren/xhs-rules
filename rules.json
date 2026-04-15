@@ -148,12 +148,26 @@
       "level": "danger",
       "suggestion": "实惠"
     },
-        {
+    {
       "pattern": "(药用|医用药材|中药配方|诺贝尔奖技术|疗效显著|可以长期服用|天然就是安全的|FDA认证|药监局批准|提高智商|增强记忆力)",
       "flags": "g",
       "type": "食品违规",
       "level": "danger",
       "suggestion": "营养补充"
+    },
+    {
+      "pattern": "(IQOS|烟弹|雾化弹|尼古丁盐|加热不燃烧|电子烟烟弹)",
+      "flags": "gi",
+      "type": "烟草/电子烟",
+      "level": "danger",
+      "suggestion": "产品分享"
+    },
+    {
+      "pattern": "(高仿|复刻|1[:：]?1复刻|1[:：]?1还原|A货|原单|尾单|同厂同源|专柜尾货)",
+      "flags": "gi",
+      "type": "知识产权/仿牌",
+      "level": "danger",
+      "suggestion": "同风格"
     }
   ],
   "tiktok": [
@@ -261,7 +275,48 @@
       "type": "Piracy Risk",
       "level": "danger",
       "suggestion": "Short clip"
+    },
+    {
+      "pattern": "(replica|counterfeit|knockoff|dupe|1:1 copy|fake designer|mirror quality|TikTok Bestseller|official TikTok partner|powered by TikTok)",
+      "flags": "gi",
+      "type": "IP/Counterfeit",
+      "level": "danger",
+      "suggestion": "Inspired style"
+    },
+    {
+      "pattern": "(waist trainer|detox tea|fat burning pills?|fat burner|appetite suppressants?|weight loss injection|weight loss surgery|fasting products?|face and body sculpting)",
+      "flags": "gi",
+      "type": "Weight Management",
+      "level": "danger",
+      "suggestion": "Fitness journey"
+    },
+    {
+      "pattern": "(casino|sportsbetting|sports betting|sweepstakes|bookmaker|bet now|jackpot|online slots)",
+      "flags": "gi",
+      "type": "Gambling",
+      "level": "danger",
+      "suggestion": "Entertainment topic"
+    },
+    {
+      "pattern": "(deepfake|face swap|voice clone|AI clone|false endorsement|fake endorsement|unlabeled AIGC|AI-generated endorsement)",
+      "flags": "gi",
+      "type": "AI Identity Misuse",
+      "level": "danger",
+      "suggestion": "Labeled creative"
+    },
+    {
+      "pattern": "(e-cigarettes?|vape pens?|vape oils?|vape cartridges|nicotine pouches?|hookah lounge|cigars?|tobacco|nicotine)",
+      "flags": "gi",
+      "type": "Tobacco/Nicotine",
+      "level": "danger",
+      "suggestion": "Lifestyle topic"
+    },
+    {
+      "pattern": "(#1 on TikTok|number ?1 (song|essence|product) on TikTok|TikTok's number ?1)",
+      "flags": "gi",
+      "type": "TikTok Ranking Claim",
+      "level": "danger",
+      "suggestion": "Popular on TikTok"
     }
   ]
 }
-
