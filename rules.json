@@ -2,20 +2,265 @@
   "version": "2026-04-15",
   "xhs": [
     {
-      "pattern": "([加➕\\+]\\s*[vV]|vx|加微信|加威信)",
+      "pattern": "([加➕\\+]\\s*[vV]|\\b[vV]心|威信|薇信|vx|绿泡泡|卫星号|小飞机|纸飞机|留邮箱|扣扣|企鹅|裙|主页加|点击链接|复制打开|某宝|海鲜市场|闲鱼|看我主页|看简介|私聊|私信我|➕|加微信|加威信|加卫星|公众号|小程序|二维码)",
       "flags": "gi",
       "type": "导流违规",
       "level": "danger",
       "suggestion": "感兴趣可以"
+    },
+    {
+      "pattern": "(1[3-9]\\d{9}|[a-zA-Z0-9_-]{6,20}(?=\\s*是我的微)|(\\d\\s*){6,}\\d)",
+      "flags": "g",
+      "type": "隐私外泄",
+      "level": "danger",
+      "suggestion": "***"
+    },
+    {
+      "pattern": "(最|第一|首个|首款|首创|顶级|极品|绝对|无敌|100%|纯天然|遥遥领先|天花板|秒杀|史无前例|绝版|特供|专供|免检|销冠|国家级|世界级|最高级|最佳|最大|全网第一|全国第一|唯一|最好|顶尖|完美|全网最低|最受欢迎|国际级|宇宙级|填补空白|无需检测|仅此一家|独一无二|前无古人|永久|终身|永不|无效退款|保证见效|零风险|稳过|必中|NO\\.1|TOP1|万能|无可替代|鼻祖|极致|全网最佳|绝无仅有)",
+      "flags": "g",
+      "type": "广告法违规",
+      "level": "danger",
+      "suggestion": "口碑很好"
+    },
+    {
+      "pattern": "(贷款|借贷|套现|提额|刷单|无抵押|秒下款|当天放款|黑户可办|信用卡提现|网贷|日息|高收益|保本保息|财富自由|百分百下款|无视征信|秒批|零风险|稳赚|保本|无抵押必过|内部渠道|最高额度|最低利息|停息挂账|债务重组|上岸|套路贷|高利贷|砍头息|以贷养贷|区块链投资|资金盘|快速变现|收益可达|官方认证|政府背书|银行合作|专家推荐|比特币|虚拟货币交易|保本|保收益|稳赚|稳赢|躺赚|必赚|无风险|零风险|高收益|稳赚不赔|只赚不赔|旱涝保收|保底收益|翻倍|本金翻倍|稳涨|必涨|即将大涨|虚拟币|以太坊|数字货币|加密货币|ICO|STO|空气币|传销币|配资|场外配资|代客理财|代操盘|委托理财|分成|非法集资|黑户可贷|不查征信|保批|必下包过)",
+      "flags": "g",
+      "type": "金融违规",
+      "level": "danger",
+      "suggestion": "资金周转"
+    },
+    {
+      "pattern": "(包过|保过|内部押题|押题|保录|内部名额|代考|包拿证|速成|替考|百分百过|必过|一次通过|免考|3天学会|7天速成|零基础变大师|改变命运|阶层跃升|名校师资|包毕业|轻松拿文凭|记忆效率提升百倍|成绩飞跃|过目不忘|7天记住永不忘|通过率|高分王者|名列前茅|缔造传奇|升学保障|提高XX分|百分百高薪就业|官方合作|教育部认证)",
+      "flags": "g",
+      "type": "教培违规",
+      "level": "danger",
+      "suggestion": "学习"
+    },
+    {
+      "pattern": "(包治百病|神药|根除|一针见效|永不复发|特效药|偏方|祖传秘方|换头术|无副作用|彻底根除|无效退款|溶脂|暴瘦|消除结节|处方药|胎儿性别|抗癌|降血压|治失眠|药到病除|包生男孩|治疗|治愈|祛除|消炎|杀菌|抗敏|防癌|抗癌|降血糖|降血压|助眠|美白|淡斑|丰胸|生发|止脱|祛疤|修复患处|药到病除|减肥|增强免疫力|改善睡眠|调节内分泌|延缓衰老|排毒|清脂|三天美白|一夜回春|换脸|永久脱毛美白针|溶脂针|干细胞|胎盘素|高血压|糖尿病|癌症|痘痘|痤疮|湿疹|鼻炎|失眠|便秘|祛痘|祛斑|去除皱纹|无斑|除菌|瘦身|换肤|无任何化学成分|无刺激|淡斑|抗皱|抗衰老|逆龄|紧致|纤体|塑形|去皱|护肤|润肤|嫩肤|焕肤)",
+      "flags": "g",
+      "type": "医疗违规",
+      "level": "danger",
+      "suggestion": "用了感觉"
+    },
+    {
+      "pattern": "(算命|看相|风水局|做法事|化太岁|下降头|转运符|血光之灾|破财|招财|旺财|旺运|化解小人|提升运势|逢凶化吉|时来运转|护身|平衡能量|转运|辟邪|看面相|占卜精准|塔罗牌准|化解|破太岁|转运符|招桃花|开光)",
+      "flags": "g",
+      "type": "迷信违规",
+      "level": "danger",
+      "suggestion": "分享"
+    },
+    {
+      "pattern": "(下头|普信|擦边|打拳|男女对立|地域黑|厌女|仇男)",
+      "flags": "g",
+      "type": "社区违规",
+      "level": "warning",
+      "suggestion": "不合适"
+    },
+    {
+      "pattern": "(zui好|dai款|tao现|v我|加v|微X|最牛|贷|米|米米|下款|上岸|稳|必)",
+      "flags": "gi",
+      "type": "变体违规",
+      "level": "warning",
+      "suggestion": "合规表述"
+    },
+    {
+      "pattern": "(医用级|医药级|食品级|婴儿可用|孕妇可用|假一罚十|专柜同款|不买后悔|血亏|烂脸|一夜变白|抗老神药|消除色斑|重返18岁|激素|抗生素|一用就白|三天见效|立竿见影|立即见效|秒变|奇迹|神器|黑科技|无刺激|药妆|痊愈|正品|明星同款)",
+      "flags": "g",
+      "type": "美妆违规",
+      "level": "danger",
+      "suggestion": "亲测推荐"
+    },
+    {
+      "pattern": "(接近母乳|优于母乳|替代母乳|赢在起跑线|神童|天才宝宝|绝对安全|无毒无害|防过敏|宝宝必买|智商税|增强智力|提高智商|灭菌|母乳化)",
+      "flags": "g",
+      "type": "母婴违规",
+      "level": "danger",
+      "suggestion": "育儿分享"
+    },
+    {
+      "pattern": "(零甲醛|食品级|永不褪色|终身保修|防辐射|绝对安全|无法破解|顶级环保)",
+      "flags": "g",
+      "type": "家居违规",
+      "level": "warning",
+      "suggestion": "品质放心"
+    },
+    {
+      "pattern": "(顶级面料|永不缩水|绝对显瘦|100%纯棉|独家设计|永不撞款|最高品质)",
+      "flags": "g",
+      "type": "服装违规",
+      "level": "warning",
+      "suggestion": "款式不错"
+    },
+    {
+      "pattern": "(全球第一|顶级配置|永不卡顿|终身质保|绝对安全|防辐射|最高清|最流畅)",
+      "flags": "g",
+      "type": "数码违规",
+      "level": "warning",
+      "suggestion": "性能不错"
+    },
+    {
+      "pattern": "(无资质推广|永不反弹|100%有效|无痛|无创|明星同款|医生推荐|注射|永久|终身维持|韩国医生|最好医院|顶级专家|国家级|全球领先|祖传|百年老字号|AI诊断|智能看病)",
+      "flags": "g",
+      "type": "医美违规",
+      "level": "danger",
+      "suggestion": "美丽分享"
+    },
+    {
+      "pattern": "(最省油|最快|顶级安全|永不故障|终身保修|零事故|绝对保值)",
+      "flags": "g",
+      "type": "汽车违规",
+      "level": "warning",
+      "suggestion": "值得考虑"
+    },
+    {
+      "pattern": "(AI生成|AI辅助创作|AI绘画|AI写作|网红店打卡|改变命运|阶层跃升|医用级|增强免疫力)",
+      "flags": "g",
+      "type": "2026新规",
+      "level": "warning",
+      "suggestion": "创作分享"
+    },
+    {
+      "pattern": "(求三连|求关注|点赞|评论|转发|收藏|互赞|留下邮箱)",
+      "flags": "g",
+      "type": "诱导互动",
+      "level": "warning",
+      "suggestion": "感谢支持"
+    },
+    {
+      "pattern": "(学区房|买到就是赚到|绝版地段|稳赚不赔|暴涨|内部认购)",
+      "flags": "g",
+      "type": "房产违规宣传",
+      "level": "danger",
+      "suggestion": "好房子"
+    },
+    {
+      "pattern": "(暴富|日入过万|零撸|躺赚|无脑搞钱|割韭菜|内部消息|杀猪盘|年入百万|全款拿下|阶层跨越|喜提豪车|包分配|无门槛高薪)",
+      "flags": "g",
+      "type": "金融防诈/炫富",
+      "level": "danger",
+      "suggestion": "有收获"
+    },
+    {
+      "pattern": "(稳赚|高收益|保本|返本|升值|众筹|点击有惊喜|全民免单|一键三连|转发抽奖|刷量|刷评|水军|代刷|比竞品好|踩竞品|最低价|跳楼价|血亏亏本|限时抢购|仅剩|抢爆|再不买就没了)",
+      "flags": "g",
+      "type": "虚假诱导",
+      "level": "danger",
+      "suggestion": "实惠"
+    },
+    {
+      "pattern": "(药用|医用药材|中药配方|诺贝尔奖技术|疗效显著|可以长期服用|天然就是安全的|FDA认证|药监局批准|提高智商|增强记忆力)",
+      "flags": "g",
+      "type": "食品违规",
+      "level": "danger",
+      "suggestion": "营养补充"
     }
   ],
   "tiktok": [
     {
-      "pattern": "(link in bio|telegram|wechat|DM me)",
+      "pattern": "(link in bio|link in comments|check my bio|check bio|go to my ig|whatsapp|telegram|wechat|TG|DM me|DM for|click the link|🔗|account in bio)",
       "flags": "gi",
       "type": "Routing",
       "level": "danger",
       "suggestion": "Check profile"
+    },
+    {
+      "pattern": "(crypto pump|10x return|guaranteed dropshipping|get rich quick|free money|100% win|sugar daddy|cashapp|passive income stream|make money online fast|稳赚不赔|投资必翻倍|零风险)",
+      "flags": "gi",
+      "type": "Spam/Scam",
+      "level": "danger",
+      "suggestion": "Business tips"
+    },
+    {
+      "pattern": "(miracle cure|lose \\d+ pounds|anti-aging miracle|cure cancer|100% natural healing|zero side effects|治愈|根治|消炎|祛除|永久去皱|三天见效|48小时解决|7天根治|无副作用)",
+      "flags": "gi",
+      "type": "Health Claims",
+      "level": "danger",
+      "suggestion": "Wellness tips"
+    },
+    {
+      "pattern": "(write your essay|cheat exam|fake degree|pay for homework|包过)",
+      "flags": "gi",
+      "type": "Academic Dishonesty",
+      "level": "danger",
+      "suggestion": "Study tips"
+    },
+    {
+      "pattern": "(best|top\\d|first|only|unique|perfect|ultimate|最好的|全国第一|国家级品质|全网最低|绝对|唯一|最便宜|销量第一|永久|100%有效|包治百病)",
+      "flags": "gi",
+      "type": "Extreme Claims",
+      "level": "danger",
+      "suggestion": "Great product"
+    },
+    {
+      "pattern": "(招财|辟邪|提升事业运|转运|风水|开光|灵验|fortune telling|astrology|psychic)",
+      "flags": "gi",
+      "type": "Superstition",
+      "level": "danger",
+      "suggestion": "Culture share"
+    },
+    {
+      "pattern": "(原价|折扣价|跳楼价|亏本甩卖|最后一天|原价XX|discount|cheap|fake price|bargain|sale|limited time)",
+      "flags": "gi",
+      "type": "Price Misleading",
+      "level": "danger",
+      "suggestion": "Good value"
+    },
+    {
+      "pattern": "(racist|sexist|homophobic|discriminat|hate speech|种族歧视|性别歧视|歧视|侮辱|insult)",
+      "flags": "gi",
+      "type": "Discrimination",
+      "level": "danger",
+      "suggestion": "Be respectful"
+    },
+    {
+      "pattern": "(violent|blood|gore|suicide|abuse|屠杀|血腥|虐待|自杀|暴力)",
+      "flags": "gi",
+      "type": "Violence",
+      "level": "danger",
+      "suggestion": "***"
+    },
+    {
+      "pattern": "(蕞|py|薏|W|m\\d|米|徽信)",
+      "flags": "gi",
+      "type": "Cloaked Terms",
+      "level": "warning",
+      "suggestion": "Standard terms"
+    },
+    {
+      "pattern": "(100%可降解|碳中和|零碳排放|环保|eco-friendly|natural|biodegradable|carbon neutral|无污染)",
+      "flags": "gi",
+      "type": "Greenwashing",
+      "level": "warning",
+      "suggestion": "Certify first"
+    },
+    {
+      "pattern": "(AI生成人物|虚假共情|虚构危机|AI generated fake|利用AI博取同情)",
+      "flags": "gi",
+      "type": "AI Misuse",
+      "level": "danger",
+      "suggestion": "Be authentic"
+    },
+    {
+      "pattern": "(like and follow|share for part|comment below|drop a comment)",
+      "flags": "gi",
+      "type": "Engagement Bait",
+      "level": "warning",
+      "suggestion": "Share thoughts"
+    },
+    {
+      "pattern": "(unalive|seggs|0nlyfans|OF|p0rn|nudes|k!ll|su!c!de|corn video|grape|pdf file)",
+      "flags": "gi",
+      "type": "Explicit/Algospeak",
+      "level": "danger",
+      "suggestion": "***"
+    },
+    {
+      "pattern": "(full movie free|download app|download link|copyright|watch full episode)",
+      "flags": "gi",
+      "type": "Piracy Risk",
+      "level": "danger",
+      "suggestion": "Short clip"
     }
   ]
 }
