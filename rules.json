@@ -148,12 +148,19 @@
       "level": "danger",
       "suggestion": "实惠"
     },
-    {
+        {
       "pattern": "(药用|医用药材|中药配方|诺贝尔奖技术|疗效显著|可以长期服用|天然就是安全的|FDA认证|药监局批准|提高智商|增强记忆力)",
       "flags": "g",
       "type": "食品违规",
       "level": "danger",
       "suggestion": "营养补充"
+    },
+    {
+      "pattern": "(远程测试词ABC)",
+      "flags": "g",
+      "type": "远程测试",
+      "level": "danger",
+      "suggestion": "测试替换"
     }
   ],
   "tiktok": [
